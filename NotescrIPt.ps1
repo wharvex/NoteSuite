@@ -31,7 +31,7 @@ function nip {
 
     $notes_dir_contents = Get-ChildItem
 
-    # For each child item (ci) in the notes dir, check if there will be a name
+    # Check if any child item (ci) of the current directory will cause a name
     # collision with the chosen file name.
     foreach ($ci in $notes_dir_contents) {
         if ($ci.Name -eq $file_name) {
